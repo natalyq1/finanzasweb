@@ -1,9 +1,9 @@
-import Header from "../../components/header-nav/Header"
+import Navbar from "../../components/header-nav/Navbar.js"
 
 function Inicio(){
     return(
         <>
-        <Header />
+        <Navbar />
         
         </>
         )

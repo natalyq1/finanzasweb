@@ -1,18 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
+
+*{box-sizing: border-box;
+  margin: 0;}
+html{
+  height: 100%; font-family: 'Source Sans Pro', sans-serif;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root{
+  --darkblue-color:#042A45;
+  --midblue-color:#135B81;
+  --lightblue-color: #73AABF;
+  --green-color: #41A7AB;
+  --darkbrown-color: #592925;
+  --darkbrown-color: #AB6A41;
+  --black-color: #000000;
+  --white-color: #ffffff;
 
-font{
+}
+header, body, footer{
   font-family: 'Source Sans Pro', sans-serif;
-  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+}
+
+.fontTitles{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16pt;
+  font-weight:400;
+  color: var(--lightblue-color);
+  text-shadow:2px 1px 2px var(--darkblue-color);
+  text-decoration: none;
+}
+.fontButtons{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14pt;
+}
+.fontParagraph{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12pt;
+}
+@media screen and (min-width:768px){
+  .fontTitles{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20pt;
+    font-weight:500;
+    color: var(--lightblue-color);
+    text-shadow:2px 2px 2px var(--darkblue-color);
+    text-decoration: none;
+  }
+  .fontButtons{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18pt;
+  }
+  .fontParagraph{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16pt;
+  }
 }

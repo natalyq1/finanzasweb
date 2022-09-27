@@ -16,10 +16,10 @@ code {
   --lightblue-color: #73AABF;
   --green-color: #41A7AB;
   --darkbrown-color: #592925;
-  --darkbrown-color: #AB6A41;
+  --orange-color: #e05f0f;
   --black-color: #000000;
   --white-color: #ffffff;
-
+  --lightlb-color: #a1bdcd;
 }
 header, body, footer{
   font-family: 'Source Sans Pro', sans-serif;
@@ -30,16 +30,36 @@ header, body, footer{
   font-size: 16pt;
   font-weight:400;
   color: var(--lightblue-color);
-  text-shadow:2px 1px 2px var(--darkblue-color);
+  text-shadow:1px 1px 2px var(--darkblue-color);
   text-decoration: none;
 }
 .fontButtons{
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14pt;
 }
-.fontParagraph{
+.fontParagraphBlack{
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 12pt;
+  color: var(--black-color);
+}
+.fontParagraphWhite{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12pt;
+  color: var(--white-color);
+}
+.primaryButton{
+ background-color: var(--darkblue-color);
+ border-color: var(--darkblue-color);
+ color: var(--orange-color);
+ box-shadow: 2px 2px 3px var(--lightblue-color),
+ -1px -1px 3px var(--lightblue-color);
+}
+.secondaryButton{
+ background-color: var(--lightlb-color);
+ border-color: var(--lightlb-color);
+ color: var(--orange-color);
+ box-shadow: 2px 2px 3px var(--darkblue-color),
+ -1px -1px 3px var(--darkblue-color);
 }
 @media screen and (min-width:768px){
   .fontTitles{
@@ -51,11 +71,9 @@ header, body, footer{
     text-decoration: none;
   }
   .fontButtons{
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18pt;
   }
-  .fontParagraph{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16pt;
+  .fontParagraphBlack, .fontParagraphWhite{
+   font-size: 16pt;
   }
 }

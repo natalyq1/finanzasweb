@@ -1,43 +1,48 @@
+import { Button } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
+import './IndexBody.css';
 
 function Bodyimg() {
   return (
-    <Carousel>
-      <Carousel.Item>
+    <Carousel fade>
+      <Carousel.Item interval={4000}>
+       <div className='SizeImgCarusel'> 
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=373940"
-          alt="First slide"
-        />
+          src="https://github.com/natalyq1/finanzasweb/blob/master/src/components/images/carusel/pexels1.jpg?raw=true"
+          alt="from:pexels"
+        /></div>
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3 className='fontParagraphWhite'>¿Qué son las finanzas?</h3>
+          <p>Te explicamos y damos herramientas que simplifican el proceso</p>
+          <Button className='primaryButton'>Saber más</Button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
-        <img
+      <Carousel.Item interval={4000}>
+      <div className='SizeImgCarusel'> 
+      <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
-          alt="Second slide"
+          src="https://github.com/natalyq1/finanzasweb/blob/master/src/components/images/carusel/pexels-2.jpg?raw=true"
+          alt="from:pexels"
         />
+      </div>
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3 className='fontParagraphWhite'>Servicios Corporativos</h3>
+          <Button className='primaryButton'>Saber más</Button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
-        <img
+      <Carousel.Item interval={4000}>
+      <div className='SizeImgCarusel'> 
+      <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
-          alt="Third slide"
+          src="https://github.com/natalyq1/finanzasweb/blob/master/src/components/images/carusel/pexels-pixabay-53621.jpg?raw=true"
+          alt="from:pexels"
         />
-
+      </div>
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3 className='fontParagraphBlack'>Servicios para personas</h3>
+          <Button className='primaryButton'>Saber más</Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

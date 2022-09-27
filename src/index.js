@@ -13,7 +13,7 @@ root.render(
 < BrowserRouter>
     <Routes>
     <Route path='/' element={<Inicio/>}></Route>
-    <Route path='/pigmento-personal/' element={<Inicio/>}></Route>
+    <Route path='/finanzasweb/' element={<Inicio/>}></Route>
     <Route path='/inicio' element={<Navigate replace to={"/"}/>}></Route>
     <Route path='/otro' element={<otro/>}></Route>
       

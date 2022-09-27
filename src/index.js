@@ -14,7 +14,7 @@ root.render(
     <Routes>
     <Route path='/' element={<Inicio/>}></Route>
     <Route path='/finanzasweb/' element={<Inicio/>}></Route>
-    <Route path='/inicio' element={<Navigate replace to={"/"}/>}></Route>
+    <Route path='/inicio/' element={<Navigate replace to={"/"}/>}></Route>
     <Route path='/otro' element={<otro/>}></Route>
       
     </Routes>

@@ -29,7 +29,7 @@ header, body, footer{
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16pt;
   font-weight:400;
-  color: var(--lightblue-color);
+  color: var(--midblue-color);
   text-shadow:1px 1px 2px var(--darkblue-color);
   text-decoration: none;
 }
@@ -47,6 +47,11 @@ header, body, footer{
   font-size: 12pt;
   color: var(--white-color);
 }
+.fontParagraphBlue{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12pt;
+  color: var(--midblue-color);
+}
 .primaryButton{
  background-color: var(--darkblue-color);
  border-color: var(--darkblue-color);
@@ -63,17 +68,13 @@ header, body, footer{
 }
 @media screen and (min-width:768px){
   .fontTitles{
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 20pt;
     font-weight:500;
-    color: var(--lightblue-color);
-    text-shadow:2px 2px 2px var(--darkblue-color);
-    text-decoration: none;
   }
   .fontButtons{
-    font-size: 18pt;
+    font-size: 16pt;
   }
-  .fontParagraphBlack, .fontParagraphWhite{
-   font-size: 16pt;
+  .fontParagraphBlack, .fontParagraphWhite, .fontParagraphBlue{
+   font-size: 14pt;
   }
 }

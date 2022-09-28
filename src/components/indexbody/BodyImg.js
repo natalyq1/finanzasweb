@@ -14,8 +14,8 @@ function Bodyimg() {
         /></div>
         <Carousel.Caption>
           <h3 className='fontParagraphWhite'>¿Qué son las finanzas?</h3>
-          <p>Te explicamos y damos herramientas que simplifican el proceso</p>
-          <Button className='primaryButton'>Saber más</Button>
+          <p className='hideVersion'>Te explicamos y damos herramientas que simplifican el proceso</p> <br/>
+          <Button className='primaryButton'href='#finanzas'>Saber más</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={4000}>
@@ -29,7 +29,7 @@ function Bodyimg() {
 
         <Carousel.Caption>
           <h3 className='fontParagraphWhite'>Servicios Corporativos</h3>
-          <Button className='primaryButton'>Saber más</Button>
+          <Button className='primaryButton' href='#corporativo'>Saber más</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={4000}>
@@ -41,8 +41,8 @@ function Bodyimg() {
         />
       </div>
         <Carousel.Caption>
-          <h3 className='fontParagraphBlack'>Servicios para personas</h3>
-          <Button className='primaryButton'>Saber más</Button>
+          <h3 className='fontParagraphBlack changeColor'>Servicios para personas</h3>
+          <Button className='primaryButton'href='#personas'>Saber más</Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

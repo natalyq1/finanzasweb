@@ -21,13 +21,13 @@ function Navbar() {
                 <Link to="/" className="fontTitles MainNavbarFontSize MainNavbarAside " >Inicio</Link>
               </Nav.Item>
               <Nav.Item>
-                <Link to="/habitaciones" className="fontTitles MainNavbarFontSize">Servicios</Link>
+                <Link to="/servicios" className="fontTitles MainNavbarFontSize">Servicios</Link>
               </Nav.Item>
               <Nav.Item>
-                <Link to="/servicios" className="fontTitles MainNavbarFontSize" >Testimonios</Link>
+                <Link to="/testimonios" className="fontTitles MainNavbarFontSize" >Testimonios</Link>
               </Nav.Item>
               <Nav.Item>
-                <Link to="/eventos" className="fontTitles MainNavbarFontSize">Contáctenos</Link>
+                <Link to="/contactenos" className="fontTitles MainNavbarFontSize">Contáctenos</Link>
               </Nav.Item>
               
               

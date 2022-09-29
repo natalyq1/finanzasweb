@@ -1,0 +1,14 @@
+.CardService{
+    background: #a1bdcd;
+    padding:0.2em;
+    border-radius:0px;
+}
+
+
+@media screen and (min-width:768px){
+    .CardService{
+        margin:1em 4em;
+        padding:2em;
+        border-radius:12px;
+    }
+}

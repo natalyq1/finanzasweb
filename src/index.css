@@ -33,6 +33,14 @@ header, body, footer{
   text-shadow:1px 1px 2px var(--darkblue-color);
   text-decoration: none;
 }
+.fontTitlesWhite{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16pt;
+  font-weight:400;
+  color: var(--white-color);
+  text-shadow:1px 1px 2px var(--lightlb-color);
+  text-decoration: none;
+}
 .fontButtons{
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14pt;

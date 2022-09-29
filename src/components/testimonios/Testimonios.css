@@ -1,0 +1,64 @@
+.BackImage{
+    background-image: url("https://github.com/natalyq1/finanzasweb/blob/master/src/components/images/testimonio/pexels-frase.jpg?raw=true");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 200px;
+    opacity: 90%;
+    position:relative;
+    z-index: -1;
+}
+.StylePhrase{
+    display: flex;
+    align-items:flex-end;
+    justify-content:end;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12pt;
+    font-weight: 400;
+    color: rgb(255, 102, 0);
+    text-shadow:1px 1px 1px rgb(0, 0, 0);
+    margin: 1em 1em;
+    opacity: 100%;
+}
+.StyleTest{
+    display: flex;
+    align-items:center;
+    justify-content:end;
+    flex-direction: column;
+    text-align: center;
+    background-color: #c6e5e6;
+}
+.ImageTest{
+    height: 200px;
+    width: auto;
+   
+}
+.displayCardImg{
+    display: flex;
+    flex-direction: column;
+    margin: 1em 1em;
+}
+@media screen and (min-width:768px){
+    .BackImage{
+        height: 400px;
+    }
+    .StylePhrase{
+        font-size: 20pt;
+        font-weight:500;
+        margin: 1em 12em;
+    }
+    .ImageTest{
+        height: 400px;
+        width: auto;
+    }
+    .displayCardImg{
+        flex-direction: row;
+        margin: 2em 8em;
+    }
+    .MarginPadTest{
+        padding: 0 2.5em;
+        
+    }
+    
+}

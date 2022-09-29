@@ -35,7 +35,7 @@ function Footer(){
                             <img src="https://img.icons8.com/material-outlined/24/e05f0f/instagram-new--v1.png" style={{ width: '20px', height: '20px' }} />
 
 
-                            <img src="https://img.icons8.com/ios-filled/50/e05f0f/tripadvisor.png" style={{ width: '20px', height: '20px' }} />
+                            <img src="https://img.icons8.com/ios/50/e05f0f/twitter--v1.png" style={{ width: '20px', height: '20px' }} />
                         </section>
                     </article>
                     <br />
@@ -82,7 +82,7 @@ function Footer(){
                         <img src="https://img.icons8.com/fluency-systems-regular/48/e05f0f/instagram-new--v1.png" style={{ width: '30px', height: '30px' }} />
 
 
-                        <img src="https://img.icons8.com/ios-filled/50/e05f0f/tripadvisor.png" style={{ width: '30px', height: '30px' }} />
+                        <img src="https://img.icons8.com/ios/50/e05f0f/twitter--v1.png" style={{ width: '25px', height: '25px' }} />
 
                     </article>
                     <article className="container">

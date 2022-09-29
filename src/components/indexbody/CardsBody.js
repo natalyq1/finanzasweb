@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from "react-router-dom";
 import './IndexBody.css';
 
 function CardsBody() {
@@ -14,7 +15,8 @@ function CardsBody() {
   <br/> Los servicios bancarios para consumidores modernizan los sistemas, automatizan los procesos y optimizan la distribución de las aplicaciones, mejorando la resistencia, la eficiencia y el tiempo de comercialización.
   
         </Card.Text>
-        <Button className='primaryButton'>Ver planes</Button>
+        <Link to="/servicios">
+        <Button className='primaryButton'>Más información</Button></Link>
       </Card.Body>
     </Card>
 
@@ -27,8 +29,8 @@ function CardsBody() {
   <br /> Con nosotros se optimizan las operaciones para crear servicios innovadores con una plataforma de nube moderna que mejora la estabilidad, la seguridad y la resistencia.
   Junto con muchos mas servicios.
   </Card.Text>
-  
-  <Button className='primaryButton'>Ver planes</Button>
+  <Link to="/servicios">
+  <Button className='primaryButton'>Más información</Button></Link>
 </Card.Body>
 </Card>
 

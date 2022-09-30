@@ -4,12 +4,12 @@ import {Ftitulo, Ftitulo2, Ftitulo3, Formulario,Label,ContenedorTerminos,Contene
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
 import Input from '../cregistro/Input';
+import './Cregistro.css';
 
 const Registro =()=>{
-  const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
+  
 	const [nombre, cambiarNombre] = useState({campo: '', valido: null});
-	const [password, cambiarPassword] = useState({campo: '', valido: null});
-	const [password2, cambiarPassword2] = useState({campo: '', valido: null});
+	const [apellido, cambiarApellido] = useState({campo: '', valido: null});
 	const [correo, cambiarCorreo] = useState({campo: '', valido: null});
 	const [telefono, cambiarTelefono] = useState({campo: '', valido: null});
     const [direccion, cambiarDireccion] = useState({campo: '', valido: null});
@@ -18,9 +18,9 @@ const Registro =()=>{
 	const [formularioValido,cambiarFormularioValido]= useState(null); 
 
   const expresiones = {
-		usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+		apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 		nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-		password: /^.{4,12}$/, // 4 a 12 digitos.
+		
 		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 		telefono: /^\d{7,14}$/, // 7 a 14 numeros.
         direccion: /^[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]{2,}$/,
@@ -28,19 +28,7 @@ const Registro =()=>{
         //[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]{2,}
 
 	}
-const validarPassword2=()=>{
-if(password.campo.length>0){
-  if(password.campo!==password2.campo){
-    cambiarPassword2((prevState)=>{
-    return{...prevState,valido:'false'}
-    });
-  }else{
-    cambiarPassword2((prevState)=>{
-      return{...prevState,valido:'true'}
-      });
-  }
-}
-}
+
 
 const onChangeTerminos=(e)=>{
 cambiarTerminos(e.target.checked);
@@ -48,10 +36,8 @@ cambiarTerminos(e.target.checked);
 
 const onSubmit =(e)=>{
   e.preventDefault();
-  if(usuario.valido==='true'&& 
+  if(apellido.valido==='true'&& 
   nombre.valido==='true'&&
-  password.valido==='true'&&
-  password2.valido==='true'&&
   correo.valido==='true'&&
   telefono.valido==='true'&&
   direccion.valido==='true'&&
@@ -59,10 +45,8 @@ const onSubmit =(e)=>{
   terminos
   ){
 	cambiarFormularioValido(true);
-	cambiarUsuario({campo:'',valido:''});
+	cambiarApellido({campo:'',valido:''});
 	cambiarNombre({campo:'',valido: null});
-	cambiarPassword({campo:'',valido: null});
-	cambiarPassword2({campo:'',valido:'null'});
 	cambiarCorreo({campo:'',valido: null});
 	cambiarTelefono({campo:'',valido: null});
     cambiarDireccion({campo:'',valido: null});
@@ -74,23 +58,20 @@ const onSubmit =(e)=>{
 
   return ( 
     <main>
-     <Ftitulo> 
-     <Ftitulo2>Mi cuenta</Ftitulo2>
-     <Ftitulo3>Mi Carrito</Ftitulo3>
-     </Ftitulo>
      
-      <Formulario action="" onSubmit={onSubmit} > 
+     
+      <Formulario className='FormContact' action="" onSubmit={onSubmit} > 
       
        
       <Input
-					estado={usuario}
-					cambiarEstado={cambiarUsuario}
+					estado={apellido}
+					cambiarEstado={cambiarApellido}
 					tipo="text"
-					label="Usuario"
-					placeholder="john123"
-					name="usuario"
-					leyendaError="El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo."
-					expresionRegular={expresiones.usuario}
+					label="Apellido"
+					placeholder="Gomez"
+					name="apellido"
+					leyendaError="El apellido solo puede contener letras y espacios."
+					expresionRegular={expresiones.apellido}
          
 				/>
 				<Input
@@ -103,26 +84,7 @@ const onSubmit =(e)=>{
 					leyendaError="El nombre solo puede contener letras y espacios."
 					expresionRegular={expresiones.nombre}
 				/>
-				<Input
-					estado={password}
-					cambiarEstado={cambiarPassword}
-					tipo="password"
-					label="Contraseña"
-					name="password1"
-					leyendaError="La contraseña tiene que ser de 4 a 12 dígitos."
-					expresionRegular={expresiones.password}
-         
-          
-				/>
-				<Input
-					estado={password2}
-					cambiarEstado={cambiarPassword2}
-					tipo="password"
-					label="Repetir Contraseña"
-					name="password2"
-					leyendaError="Ambas contraseñas deben ser iguales."
-					funcion={validarPassword2}
-				/>
+			
 				<Input
 					estado={correo}
 					cambiarEstado={cambiarCorreo}
@@ -182,14 +144,15 @@ const onSubmit =(e)=>{
         Acepto Terminos y Condiciones
       </Label>
       </ContenedorTerminos>
+	  
       {formularioValido===false && <MensajeError>
         <p>
           <FontAwesomeIcon icon={faExclamationTriangle}/>
-          <b>Error:</b>Por favor diligenciar el formulario correctamente</p>
+          Incompleto.</p>
       </MensajeError>}
       <ContenedorBotonCentrado>
         <Boton type="submit">Enviar</Boton>
-        {formularioValido === true && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>}
+        {formularioValido === true && <MensajeExito>¡Formulario enviado exitosamente!</MensajeExito>}
       </ContenedorBotonCentrado>
      
       </Formulario>

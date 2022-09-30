@@ -3,9 +3,9 @@ import styled, {css} from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const colores = {
-	borde: "#0075FF",
-	error: "#bb2929",
-	exito: "#1ed12d"
+	borde: "#e05f0f",
+	error: "#e05f0f",
+	exito: "#042A45"
 }
 const Ftitulo = styled.p`
     color: #572612;
@@ -55,10 +55,10 @@ const Formulario = styled.form`
 	gap: 20px;
     margin: 1em 8em 3em 8em;
     padding:1em 1em;
-    border-radius: 18px;
-background: #eedc90;
-box-shadow:  19px 19px 0px #9d915f,
-             -19px -19px 0px #ffffc1;
+    border-radius: 42px;
+background: #41a7ab;
+box-shadow: inset 5px 5px 10px #1e4d4f,
+            inset -5px -5px 10px #64ffff;
 
 	@media (max-width: 800px){
 		grid-template-columns: 1fr;
@@ -86,8 +86,9 @@ const GrupoInput = styled.div`
 
 const Input = styled.input`
 	width: 100%;
-	background: #fff;
+	background-color: #d9edee;
 	border-radius: 3px;
+	margin: 0 0.4em;
 	height: 45px;
 	line-height: 45px;
 	padding: 0 40px 0 10px;
@@ -167,42 +168,40 @@ const ContenedorBotonCentrado = styled.div`
 `;
 
 const Boton = styled.button`
-	height: 45px;
+background-color: var(--lightlb-color);
+border-color: var(--lightlb-color);
+color: var(--orange-color);
+box-shadow: 2px 2px 3px var(--darkblue-color),
+-1px -1px 3px var(--darkblue-color);
+
+height: 45px;
 	line-height: 45px;
 	width: 80%;
-	font-weight: bold;
-	border: none;
+	
 	border-radius: 6px;
 	cursor: pointer;
-	color: #F9D544;
-    background: linear-gradient(145deg, #5d2913, #4e2210);
-    
-
-	&:hover {
-		box-shadow: 3px 2px 3px #000;
-	}
+  
 	@media (min-width: 600px){
 		width: 17%;
 	}
 `;
 
 const MensajeExito = styled.p`
-	font-size: 14px;
+	font-size: 12px;
 	color: ${colores.exito};
 `;
 
 const MensajeError = styled.div`
-	height: 45px;
-	line-height: 45px;
-	background: #F66060;
-	padding: 0px 15px;
+	
+	background: #f0af87;
+	padding:0 1em;
 	border-radius: 3px;
-	grid-column: span 2;
-	p {
-		margin: 0;
-	} 
-	b {
-		margin-left: 10px;
+	font-size: 12px;
+	
+	@media (min-width: 600px){
+		width:fit-content;
+		display:flex;
+		align-items:center;
 	}
 `;
 

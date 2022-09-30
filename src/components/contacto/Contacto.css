@@ -1,0 +1,17 @@
+.StyleContact{
+    border-radius: 42px;
+background: #41a7ab;
+box-shadow: inset 5px 5px 10px #1e4d4f,
+            inset -5px -5px 10px #64ffff;
+padding: 0 1em;
+}
+.SmallVersion{
+    display: none;
+}
+
+@media screen and (min-width:768px){
+    .SmallVersion{
+        display:block;
+        margin-block: 6em;
+    }
+}

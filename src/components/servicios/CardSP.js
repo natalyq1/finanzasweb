@@ -8,7 +8,7 @@ function CardsServicioP() {
     <Card className='MarginPadCard CardSize' style={{background:'#a1bdcd', border:'none'}} >
       <Card.Body>
         <Card.Title id='personas' className='fontTitles'>Asesoría a personas 
-        <br /> Asesoria inicial $60.000
+        <br /> Asesoria por una hora $60.000
         </Card.Title>
         <Card.Text className='fontParagraphBlue'>
         La competencia digital implica poder adaptarse con mayor facilidad al mercado internacional actual.

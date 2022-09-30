@@ -26,7 +26,7 @@ function CardsServicioC() {
 <Card className='MarginPadCard CardSize' style={{background:'#a1bdcd', border:'none'}} >
       <Card.Body>
         <Card.Title id='personas' className='fontTitles'>Asesoría a corporativos
-        <br /> Asesoria inicial $110.000
+        <br /> Asesoria por una hora $110.000
         </Card.Title>
         <Card.Text className='fontParagraphBlue'>
         La digitalización, la inteligencia y las conexiones son el futuro de los bancos comerciales. 

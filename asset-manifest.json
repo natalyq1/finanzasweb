@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/finanzasweb/static/css/main.57760e9b.css",
-    "main.js": "/finanzasweb/static/js/main.3a4955b8.js",
+    "main.js": "/finanzasweb/static/js/main.da9eb996.js",
     "static/media/logoletra.svg": "/finanzasweb/static/media/logoletra.3b606ade89bf4c62763c.svg",
     "static/media/logo.svg": "/finanzasweb/static/media/logo.f64799f4046b10dc5ac0.svg",
     "index.html": "/finanzasweb/index.html",
     "main.57760e9b.css.map": "/finanzasweb/static/css/main.57760e9b.css.map",
-    "main.3a4955b8.js.map": "/finanzasweb/static/js/main.3a4955b8.js.map"
+    "main.da9eb996.js.map": "/finanzasweb/static/js/main.da9eb996.js.map"
   },
   "entrypoints": [
     "static/css/main.57760e9b.css",
-    "static/js/main.3a4955b8.js"
+    "static/js/main.da9eb996.js"
   ]
 }

@@ -1,5 +1,6 @@
 
 import React, {useState} from 'react';
+import { Link } from "react-router-dom";
 import {Ftitulo, Ftitulo2, Ftitulo3, Formulario,Label,ContenedorTerminos,ContenedorBotonCentrado,Boton,MensajeExito,MensajeError} from '../../elements/registroform/Formulariovalidacion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
@@ -17,11 +18,11 @@ const Registro =()=>{
 	const [formularioValido,cambiarFormularioValido]= useState(null); 
 
   const expresiones = {
-		consulta: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+		consulta: /^[a-zA-ZÀ-ÿ\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
 		nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 		telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-        pais: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+        pais: /^[a-zA-ZÀ-ÿ\s]{3,40}$/,
         //[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]{2,}
 
 	}
@@ -131,13 +132,16 @@ const onSubmit =(e)=>{
       </ContenedorTerminos>
 	  
       {formularioValido===false && <MensajeError>
-        <p>
-          <FontAwesomeIcon icon={faExclamationTriangle}/>
-          Incompleto.</p>
+        <p className='fontParagraphBlue'>
+          <FontAwesomeIcon icon={faExclamationTriangle}/> Incompleto.</p>
       </MensajeError>}
       <ContenedorBotonCentrado>
-        <Boton  className='fontButtons secondaryButton btn ' type="submit">Enviar</Boton>
-        {formularioValido === true && <MensajeExito><p>¡Formulario enviado exitosamente!</p></MensajeExito>}
+        <Boton className='fontButtons secondaryButton btn ' type="submit">Enviar</Boton>
+        {formularioValido === true && <MensajeExito>
+			<p className='fontParagraphBlue'>
+				¡Formulario enviado exitosamente!</p>
+			<Link to="/" className="StyleLink"> Inicio</Link>
+			</MensajeExito>}
       </ContenedorBotonCentrado>
      
       </Formulario>

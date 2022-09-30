@@ -177,17 +177,14 @@ const MensajeExito = styled.p`
 `;
 
 const MensajeError = styled.p`
-	height: 30px;
-	line-height: 30px;
 	background: #f0af87;
-	padding:0 1em;
+	padding:0.5em 1em 0 1em;
 	border-radius: 8px;
-	font-size: 12px;
-	
+	font-size: 10px;
+	display: flex;
+  	justify-content: center;
 	@media (min-width: 600px){
-		width:fit-content;
-		display:flex;
-		align-items:center;
+		font-size: 12px;
 	}
 `;
 

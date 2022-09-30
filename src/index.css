@@ -74,6 +74,12 @@ header, body, footer{
  box-shadow: 2px 2px 3px var(--darkblue-color),
  -1px -1px 3px var(--darkblue-color);
 }
+.StyleLink{
+  text-decoration:underline var(--darkblue-color);
+  color: var(--darkblue-color);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12pt;
+}
 @media screen and (min-width:768px){
   .fontTitles{
     font-size: 20pt;
@@ -85,4 +91,8 @@ header, body, footer{
   .fontParagraphBlack, .fontParagraphWhite, .fontParagraphBlue{
    font-size: 14pt;
   }
+}
+.v{
+  display: flex;
+  justify-content: center;
 }

@@ -9,22 +9,19 @@ import './Cregistro.css';
 const Registro =()=>{
   
 	const [nombre, cambiarNombre] = useState({campo: '', valido: null});
-	const [apellido, cambiarApellido] = useState({campo: '', valido: null});
+	const [consulta, cambiarConsulta] = useState({campo: '', valido: null});
 	const [correo, cambiarCorreo] = useState({campo: '', valido: null});
 	const [telefono, cambiarTelefono] = useState({campo: '', valido: null});
-    const [direccion, cambiarDireccion] = useState({campo: '', valido: null});
-    const [direccion2, cambiarDireccion2] = useState({campo: '', valido: null});
-	const [terminos,cambiarTerminos]= useState(false);
+    const [pais, cambiarPais] = useState({campo: '', valido: null});
+    const [terminos,cambiarTerminos]= useState(false);
 	const [formularioValido,cambiarFormularioValido]= useState(null); 
 
   const expresiones = {
-		apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+		consulta: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 		nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-		
 		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 		telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-        direccion: /^[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]{2,}$/,
-        direccion2: /^[a-zA-Z0-9._%+-ÿ \s]{4,30}$/
+        pais: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
         //[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]+[a-z0-9._%+-\s]{2,}
 
 	}
@@ -36,21 +33,19 @@ cambiarTerminos(e.target.checked);
 
 const onSubmit =(e)=>{
   e.preventDefault();
-  if(apellido.valido==='true'&& 
+  if(consulta.valido==='true'&& 
   nombre.valido==='true'&&
   correo.valido==='true'&&
   telefono.valido==='true'&&
-  direccion.valido==='true'&&
-  direccion2.valido==='true'&&
+  pais.valido==='true'&&
   terminos
   ){
 	cambiarFormularioValido(true);
-	cambiarApellido({campo:'',valido:''});
+	cambiarConsulta({campo:'',valido:''});
 	cambiarNombre({campo:'',valido: null});
 	cambiarCorreo({campo:'',valido: null});
 	cambiarTelefono({campo:'',valido: null});
-    cambiarDireccion({campo:'',valido: null});
-    cambiarDireccion2({campo:'',valido:'null'});
+    cambiarPais({campo:'',valido: null});
 }else{
 	cambiarFormularioValido(false);
 }
@@ -64,24 +59,24 @@ const onSubmit =(e)=>{
       
        
       <Input
-					estado={apellido}
-					cambiarEstado={cambiarApellido}
+					estado={consulta}
+					cambiarEstado={cambiarConsulta}
 					tipo="text"
-					label="Apellido"
-					placeholder="Gomez"
-					name="apellido"
-					leyendaError="El apellido solo puede contener letras y espacios."
-					expresionRegular={expresiones.apellido}
+					label="Consulta como:"
+					placeholder="persona, empresa, ambas"
+					name="consulta"
+					leyendaError="Especificar si consulta como persona, empresa o ambas."
+					expresionRegular={expresiones.consulta}
          
 				/>
 				<Input
 					estado={nombre}
 					cambiarEstado={cambiarNombre}
 					tipo="text"
-					label="Nombre y apellido"
+					label="Nombre y apellido:"
 					placeholder="John Doe"
-					name="usuario"
-					leyendaError="El nombre solo puede contener letras y espacios."
+					name="nombre"
+					leyendaError="Solo puede contener letras y espacios."
 					expresionRegular={expresiones.nombre}
 				/>
 			
@@ -89,46 +84,36 @@ const onSubmit =(e)=>{
 					estado={correo}
 					cambiarEstado={cambiarCorreo}
 					tipo="email"
-					label="Correo Electrónico"
+					label="Correo Electrónico:"
 					placeholder="john@correo.com"
 					name="correo"
-					leyendaError="El correo solo puede contener letras, numeros, puntos, guiones y guion bajo."
+					leyendaError="Solo puede contener letras, numeros, puntos, guión y guión bajo."
 					expresionRegular={expresiones.correo}
 				/>
 				<Input
 					estado={telefono}
 					cambiarEstado={cambiarTelefono}
 					tipo="text"
-					label="Teléfono"
+					label="Teléfono:"
 					placeholder="4491234567"
 					name="telefono"
-					leyendaError="El telefono solo puede contener numeros y el maximo son 14 dígitos."
+					leyendaError="Solo puede contener numeros y el máximo son 14 dígitos."
 					expresionRegular={expresiones.telefono}
 				/>
 
 <Input
-					estado={direccion}
-					cambiarEstado={cambiarDireccion}
+					estado={pais}
+					cambiarEstado={cambiarPais}
 					tipo="text"
-					label="Dirección"
-					placeholder="cra 79 n 10-20"
-					name="direccion"
-					leyendaError="La direccion debe contener letras, numeros y guion, puntos opcionales"
-					expresionRegular={expresiones.direccion}
+					label="País:"
+					placeholder="Ejemplo:Peru"
+					name="pais"
+					leyendaError="Solo debe contener letras."
+					expresionRegular={expresiones.pais}
          
 				/>
 
-<Input
-					estado={direccion2}
-					cambiarEstado={cambiarDireccion2}
-					tipo="text"
-					label="Detalles Dirección"
-					placeholder="casa o apartamento"
-					name="direccion2"
-					leyendaError="La direccion debe contener letras, numeros, guion y puntos opcionales"
-					expresionRegular={expresiones.direccion2}
-         
-				/>
+
 
            
 
@@ -151,8 +136,8 @@ const onSubmit =(e)=>{
           Incompleto.</p>
       </MensajeError>}
       <ContenedorBotonCentrado>
-        <Boton type="submit">Enviar</Boton>
-        {formularioValido === true && <MensajeExito>¡Formulario enviado exitosamente!</MensajeExito>}
+        <Boton  className='fontButtons secondaryButton btn ' type="submit">Enviar</Boton>
+        {formularioValido === true && <MensajeExito><p>¡Formulario enviado exitosamente!</p></MensajeExito>}
       </ContenedorBotonCentrado>
      
       </Formulario>

@@ -168,22 +168,7 @@ const ContenedorBotonCentrado = styled.div`
 `;
 
 const Boton = styled.button`
-background-color: var(--lightlb-color);
-border-color: var(--lightlb-color);
-color: var(--orange-color);
-box-shadow: 2px 2px 3px var(--darkblue-color),
--1px -1px 3px var(--darkblue-color);
-
-height: 45px;
-	line-height: 45px;
-	width: 80%;
-	
-	border-radius: 6px;
 	cursor: pointer;
-  
-	@media (min-width: 600px){
-		width: 17%;
-	}
 `;
 
 const MensajeExito = styled.p`
@@ -191,11 +176,12 @@ const MensajeExito = styled.p`
 	color: ${colores.exito};
 `;
 
-const MensajeError = styled.div`
-	
+const MensajeError = styled.p`
+	height: 30px;
+	line-height: 30px;
 	background: #f0af87;
 	padding:0 1em;
-	border-radius: 3px;
+	border-radius: 8px;
 	font-size: 12px;
 	
 	@media (min-width: 600px){
